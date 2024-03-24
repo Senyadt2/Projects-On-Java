@@ -1,0 +1,9 @@
+127.0.0.1 - - [24/Mar/2024:09:13:48 +0545] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [24/Mar/2024:09:13:48 +0545] "GET /WebAppWithoutWebXML/WEB-INF/classes/in/sp/backend/MyServlet.java HTTP/1.1" 404 683
+0:0:0:0:0:0:0:1 - - [24/Mar/2024:09:13:49 +0545] "GET /favicon.ico HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [24/Mar/2024:09:13:55 +0545] "GET /WebAppWithoutWebXML/ HTTP/1.1" 200 169
+0:0:0:0:0:0:0:1 - - [24/Mar/2024:09:13:57 +0545] "GET /WebAppWithoutWebXML/www.google.com HTTP/1.1" 404 790
+127.0.0.1 - - [24/Mar/2024:09:14:46 +0545] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [24/Mar/2024:09:14:46 +0545] "GET /WebAppWithoutWebXML/WEB-INF/classes/in/sp/backend/MyServlet.java HTTP/1.1" 404 683
+0:0:0:0:0:0:0:1 - - [24/Mar/2024:09:14:50 +0545] "GET /WebAppWithoutWebXML/ HTTP/1.1" 200 158
+0:0:0:0:0:0:0:1 - - [24/Mar/2024:09:14:51 +0545] "GET /WebAppWithoutWebXML/aaa HTTP/1.1" 200 -
