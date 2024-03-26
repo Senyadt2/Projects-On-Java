@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+	request.setAttribute("name", "ravi");
+	/* String name =(String) request.getAttribute("name"); */
+	/* out.print(name); */
+	
+	%>
+	<h3>Hello ${requestScope.name}</h3>
+	 
+	 <% session.setAttribute("sessionname", "suman");
+	 	/* out.print(session.getAttribute("name")); */
+	 	
+	 %>
+	 <h3>In session ${requestScope.sessionname}</h3>
+	 
+	 
+</body>
+</html>

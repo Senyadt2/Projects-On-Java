@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+	String name = (String) request.getAttribute("name_key");
+	%>
+	<h1>Welcome to About</h1>
+	<a href="home.jsp">Home</a>
+	<a href="about.jsp">About Us</a>
+	<a href="profile.jsp">More</a>
+	
+
+</body>
+</html>

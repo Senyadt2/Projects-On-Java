@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SendRequest-RequestDispatcher&apos; to &apos;SendRequest&apos;" description="Rename resource &apos;SendRequest-RequestDispatcher&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/SendRequest-RequestDispatcher" name="SendRequest" stamp="1711264331439" updateReferences="true"/>
+</session>

@@ -1,0 +1,37 @@
+package in.sp.backend;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("/aaa")
+public class MyServlet extends HttpServlet{
+//	@Override
+//	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//		String name = request.getParameter("name");
+//		String emailString = request.getParameter("email");
+//		System.out.println(name + " " + emailString);
+//		
+//		PrintWriter out = response.getWriter();
+//		out.print("Name :" + name);
+//		out.print("Email :" + emailString);
+//	}
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String name = request.getParameter("name");
+		String emailString = request.getParameter("email");
+		System.out.println(name + " " + emailString);
+		
+		PrintWriter out = response.getWriter();
+		out.print("Name :" + name);
+		out.print("Email :" + emailString);
+	}
+	
+	
+}

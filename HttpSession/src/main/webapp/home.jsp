@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+	String name = (String) session.getAttribute("name");
+	%>
+	<h1>Welcome to Home : <%= name %></h1>
+	<%
+	if(name != null) {
+	%>
+	<a href="home.jsp">Home</a>
+	<a href="about.jsp">About Us</a>
+	<a href="profile.jsp">More</a>
+	<a href="Logout">Log out</a>
+	<% }else {
+	%>
+	<a href="index.html">Login</a>
+	<%} %>
+
+	
+</body>
+</html>

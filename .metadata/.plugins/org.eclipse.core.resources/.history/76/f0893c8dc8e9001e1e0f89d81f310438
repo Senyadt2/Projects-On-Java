@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Welcome to form</h1>
+	<a href="home.jsp">Home</a>
+	<a href="about.jsp">About Us</a>
+	<a href="more.jsp">More</a>
+	
+	
+	<form action="MyServlet" method="get">
+		<input type="text" name="name" placeholder="Enter name"><br>
+		<input type="password" name="password" placeholder="Enter password"><br>
+		<button type="submit" value="login">Submit</button>
+	</form>
+
+</body>
+</html>

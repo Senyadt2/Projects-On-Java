@@ -1,0 +1,35 @@
+<%@page import="java.time.LocalDate"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- declaration  -->
+	<%!int a = 10;
+	String name = "Ravi";
+
+	int square() {
+		return a * a;
+	}%>
+	<!-- multiple printing available  -->
+	<%
+	out.println(a);
+	out.println(name);
+	out.println(square());
+
+	if (a > 5) {
+		out.println("A is greater");
+	}
+	%>
+	<!-- single printing -->
+	<%=a%>
+	<%=name%>
+	<%=square()%>
+	<%= LocalDate.now() %>
+	<%= Math.floor(Math.random()*1) %>
+</body>
+</html>

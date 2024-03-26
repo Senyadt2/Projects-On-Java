@@ -1,0 +1,47 @@
+package in.sp.backend;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("/login")
+public class Login extends HttpServlet {
+	/*
+	 * @Override protected void service(HttpServletRequest request,
+	 * HttpServletResponse response) throws ServletException, IOException { String
+	 * name = (String) request.getParameter("name1"); String pass = (String)
+	 * request.getParameter("pass1"); if(name.equals("admin") &&
+	 * pass.equals("pass")) { System.out.println("Success"); } }
+	 */
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String name = request.getParameter("name1");
+		String emailString = request.getParameter("pass1");
+		System.out.println(name + " " + emailString);
+		System.out.println("Inside get");
+		PrintWriter out = response.getWriter();
+		out.print("Name :" + name);
+		out.print("Email :" + emailString);
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String name = request.getParameter("name");
+		String emailString = request.getParameter("pass");
+		System.out.println(name + " " + emailString);
+		System.out.println("Inside post");
+		PrintWriter out = response.getWriter();
+		out.print("Name :" + name);
+		out.print("Email :" + emailString);
+
+	}
+
+}

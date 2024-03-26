@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Welcome to form</h1>
+<!-- 	<form action="login" method="get">
+		<input type="text" name="name1" placeholder="Enter name"><br>
+		<input type="password" name="pass1" placeholder="Enter passowrd"><br>
+		<button type="submit" value="login">Submit</button>
+	</form> -->
+</body>
+</html>

@@ -1,0 +1,58 @@
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("/register")
+public class Register extends HttpServlet {
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		PrintWriter outPrintWriter = resp.getWriter();
+		String name = req.getParameter("name");
+		String email = req.getParameter("email");
+		String password = req.getParameter("password");
+		String gender = req.getParameter("gender");
+		String city = req.getParameter("city");
+
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/registerservletjsp");
+			String queryString = "insert into register values(?,?,?,?,?)";//register parameter
+			PreparedStatement pStatement = connection.prepareStatement(queryString);
+			pStatement.setString(1,name);
+			pStatement.setString(2, email);
+			pStatement.setString(3, password);
+			pStatement.setString(3, gender);
+			pStatement.setString(5, city);
+			int rowsAffect = pStatement.executeUpdate();
+			if(rowsAffect > 0) {
+				System.out.println("Registered");
+				outPrintWriter.print("<h3 style=`color:green`>Registered Success</h3>");
+				resp.setContentType("text/html");
+				RequestDispatcher rDispatcher = req.getRequestDispatcher("/register.jsp");
+				rDispatcher.include(req, resp);
+			}
+			else {
+				System.out.println("Registered");
+				outPrintWriter.print("<h3 style=`color:red`>Registered Success</h3>");
+				resp.setContentType("text/html");
+				RequestDispatcher rDispatcher = req.getRequestDispatcher("/register.jsp");
+				rDispatcher.include(req, resp);
+			}
+			
+
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+
+	}
+
+}

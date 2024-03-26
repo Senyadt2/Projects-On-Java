@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="register" method="post">
+		Name:<input type="text" name="name" placeholder="Enter name"><br>
+		Email:<input type="text" placeholder="Enter name"><br> P:
+		<input type="text" placeholder="Enter name"><br> Gender:<input
+			type="radio" name="gender" value="male">Male</input> <input
+			type="radio" name="gender" value="female"> female </input> <br>
+		City: <select>
+			<option>Select City</option>
+			<option>Kathmadu</option>
+			<option>Patan</option>
+			<option>Kritipur</option>
+			<option>Bhaktapur</option>
+		</select> <input type="submit" value="Register">
+	</form>
+
+</body>
+</html>
